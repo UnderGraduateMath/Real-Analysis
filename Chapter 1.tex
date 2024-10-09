@@ -1,0 +1,60 @@
+\documentclass[12 pt]{article}
+\usepackage{amsfonts, amssymb}
+  
+%\usepackage{setspace}
+
+\oddsidemargin=-0.5cm
+\setlength{\textwidth}{6.5in}
+\addtolength{\voffset}{-20pt}
+\addtolength{\headsep}{25pt}
+
+
+
+\pagestyle{myheadings}
+\markright{TCC\hfill \today \hfill}
+
+
+\newcommand{\eqn}[0]{\begin{array}{rcl}}
+\newcommand{\eqnend}[0]{\end{array} }
+\newcommand{\qed}[0]{$\square$}
+
+%\doublespacing
+
+\begin{document}
+ 
+\textbf{Exercise 1.2.5 (De Morgan's Laws)} Let A and B be subsets of \(\mathbb{R}\).
+
+\begin{enumerate}
+\item If \(x \in A \cap B\), explain why \(x \in A^c \cup B^c\). This shows that \((A \cap B)^c \subseteq A^c \cup B^c\).
+\item Prove the reverse inclusion \((A \cap B)^c \supseteq A^c \cup B^c\) and conclude that \((A \cup B)^c = A^c \cap B^c\).
+\item Show \((A \cup B)^c = A^c \cap B^c\) by demonstrating inclusion both ways.
+\end{enumerate}
+
+\vspace{5mm}
+\textbf{Proof:}
+\begin{enumerate}
+\item If \(x \in (A \cap B)^c\), this implies that \(x \not \in A \cap B\). By the definition of the set intersection, this means that \(x \not \in A\) or \(x \not \in B\). This means that \(x \in A^c\) or \(x \in B^c\). If \(x \in A^c\), this means that \(x \in A^c \cup B^c\). If \(x \in B^c\), then \(x \in B^c \cup A^c\), which is the same thing as \(x \in  A^c \cup B^c\). \qed
+
+\item If $x \in A^c \cup B^c$, this means that $x \in A^c$ or $x \in B^c$. This also means that $x \not \in  A$ or $x \not \in B$, which further implies that $x \not \in A \cap B$. This finally implies that $x \in (A \cap B)^c$ \qed
+
+\item Let \(x \in (A \cup B)^c\), which implies that \(x \not \in A \cup B\), which means that \(x \not \in A\) and \(x \not \in B\). This means that \(x \in A^c\) and \(x \in B^c\), which is the same as \(x \in A^c \cap B^c\). For the reverse inclusion, let \(x \in A^c \cap B^c\), which means that \(x \in A^c\) and \(x \in B^c\) by the definition of the set intersection. This implies that \(x \not \in A\) and \(x \not \in B\), which means that \(x \not \in A \cup B\), which is the same thing as saying that \(x \in (A \cup B)^c\). \qed
+\end{enumerate}
+
+\newpage
+
+\textbf{Exercise 1.2.6 (Triangle Inequality)}
+\begin{enumerate}
+\item Verify the triangle inequality in the special case where a and b have the same sign.
+\item Find an efficient proof for all the cases at once by first demonstrating that $(a+b)^2 \leq (|a|+|b|)^2$.
+\item Prove $|a-b| \leq |a-c| + |c-d| + |d-b|$ for all $a, b,c$, and $d$.
+\item Prove $||a|-|b|| \leq |a-b|$.
+\end{enumerate}
+
+\textbf{Proof:}
+\begin{enumerate}
+\item We shall proceed by cases. In the case that both a and b are positive, \(|a| = a\) and \(|b| = b\), so we may rewrite the triangle inequality in this case as  \(|a + b| \leq a + b\). It follows that \(|a + b|\) can be written as \(a + b\) as both \(a\) and \(b\) are positive numbers and therefore their sum will be a positive number. Substituting the alternate forms we have just derived back into the triangle inequality, we get the equation \(a + b \leq a + b\), which is true for all \(a, b \in \mathbb{R}_{\geq 0}\). In the case that both a and b are negative, we have from the definition of the absolute value that \(|a| = -a\) and \(|b| = -b\). This means that \(|a| + |b| = -a + (-b) = -a - b\) and that \(|a+b|= -(a+b) = (-a - b)\). Simplifying, we arrive at the equation \(-a -b \leq -a - b\), which is true for all \(a, b \in \mathbb{R}_{\leq 0}\). \qed
+
+\item We shall begin by expanding both sides of the equation. The left side expands to $a^2 + 2ab + b^2$ and the right side expands to \(a^2 + 2|a||b| + b^2\). Note that we can drop the absolute value bars for \(a^2\) and \(b^2\) on the right as the square of any number, positive or negative is always positive, and by the definition of the absolute value, if a number a is positive, then \(|a| = a\). Simplifying yields the inequality \(2ab \leq 2|a||b|\), which is true because \(2ab\) can be negative (consider the case where either a or b is negative but not both) but \(2|a||b|\) cannot be negative due to the absolute value of any real number always being positive. As squaring preserves the inequality, it follows that \(|a + b| \leq |a| + |b|\). \qed
+
+\end{enumerate}
+\end{document}
