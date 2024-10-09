@@ -56,5 +56,8 @@
 
 \item We shall begin by expanding both sides of the equation. The left side expands to $a^2 + 2ab + b^2$ and the right side expands to \(a^2 + 2|a||b| + b^2\). Note that we can drop the absolute value bars for \(a^2\) and \(b^2\) on the right as the square of any number, positive or negative is always positive, and by the definition of the absolute value, if a number a is positive, then \(|a| = a\). Simplifying yields the inequality \(2ab \leq 2|a||b|\), which is true because \(2ab\) can be negative (consider the case where either a or b is negative but not both) but \(2|a||b|\) cannot be negative due to the absolute value of any real number always being positive. As squaring preserves the inequality, it follows that \(|a + b| \leq |a| + |b|\). \qed
 
+\item We begin by noticing that \(|a-b|\) is equivalent to \(|(a-c) + (c-d) + (d-b)|\). Now subtituting that into the original equation, we get \(|(a-c) + (c-d) + (d-b)| \leq |a-c| + |c-d| + |d-b|\).
+
+\item As \(||a|-|b|| = ||b| - |a||\) for all \(a, b \in \mathbb{R}\), we can assume that \(|a| > |b|\). Then by application of the triangle inequality, \(||a|-|b|| = |a| - |b| = |(a-b) + b| - |b| \leq |a-b| + |b| - |b| = |a-b|\). \qed
 \end{enumerate}
 \end{document}
