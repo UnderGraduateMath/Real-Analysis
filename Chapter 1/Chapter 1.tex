@@ -33,12 +33,19 @@
 \vspace{5mm}
 \textbf{Proof:}
 \begin{enumerate}
-\item If \(x \in (A \cap B)^c\), this implies that \(x \not \in A \cap B\). By the definition of the set intersection, this means that \(x \not \in A\) or \(x \not \in B\). This means that \(x \in A^c\) or \(x \in B^c\). If \(x \in A^c\), this means that \(x \in A^c \cup B^c\). If \(x \in B^c\), then \(x \in B^c \cup A^c\), which is the same thing as \(x \in  A^c \cup B^c\). \qed
+\item If \(x \in (A \cap B)^c\), this implies that \(x \not \in A \cap B\). By the definition of the set intersection, this means that \(x \not \in A\) or \(x \not \in B\). This means that \(x \in A^c\) or \(x \in B^c\). If \(x \in A^c\), this means that \(x \in A^c \cup B^c\). If \(x \in B^c\), then \(x \in B^c \cup A^c\), which is the same thing as \(x \in  A^c \cup B^c\). This implies that \((A \cap B)^c \subseteq A^c \cup B^c \)\qed
 
-\item If $x \in A^c \cup B^c$, this means that $x \in A^c$ or $x \in B^c$. This also means that $x \not \in  A$ or $x \not \in B$, which further implies that $x \not \in A \cap B$. This finally implies that $x \in (A \cap B)^c$ \qed
+\item If $x \in A^c \cup B^c$, this means that $x \in A^c$ or $x \in B^c$. This also means that $x \not \in  A$ or $x \not \in B$, which further implies that $x \not \in A \cap B$. This finally implies that $x \in (A \cap B)^c$, showing as desired that \((A \cap B)^c \supseteq A^c \cup B^c\). As both incusions have been shown, \((A \cup B)^c = A^c \cap B^c\). \qed
 
-\item Let \(x \in (A \cup B)^c\), which implies that \(x \not \in A \cup B\), which means that \(x \not \in A\) and \(x \not \in B\). This means that \(x \in A^c\) and \(x \in B^c\), which is the same as \(x \in A^c \cap B^c\). For the reverse inclusion, let \(x \in A^c \cap B^c\), which means that \(x \in A^c\) and \(x \in B^c\) by the definition of the set intersection. This implies that \(x \not \in A\) and \(x \not \in B\), which means that \(x \not \in A \cup B\), which is the same thing as saying that \(x \in (A \cup B)^c\). \qed
+\item We shall proceed to show incluion by cases.
+\begin{enumerate}
+\item[\(\Rightarrow\)] For the forward inclusion, let \(x \in (A \cup B)^c\), which implies that \(x \not \in A \cup B\), which means that \(x \not \in A\) and \(x \not \in B\). This means that \(x \in A^c\) and \(x \in B^c\), which is the same as \(x \in A^c \cap B^c\). This finally implies that \(A \cup B)^{c} \subseteq A^{c} \cap B^{c}\).
+
+\item[\(\Leftarrow\)] For the reverse inclusion, let \(x \in A^c \cap B^c\), which means that \(x \in A^c\) and \(x \in B^c\) by the definition of the set intersection. This implies that \(x \not \in A\) and \(x \not \in B\), which means that \(x \not \in A \cup B\), which is the same thing as saying that \(x \in (A \cup B)^c\). This finally implies that \(A^{c} \cap B^{c} \subseteq (A \cup B)^{c}\).
+\item[Conclusion] As we have shown that \(A \cup B)^{c} \subseteq A^{c} \cap B^{c}\) and \(A^{c} \cap B^{c} \subseteq (A \cup B)^{c}\), we have proven that \((A \cup B)^c = A^c \cap B^c\). \qed
 \end{enumerate}
+\end{enumerate}
+
 
 \newpage
 
@@ -52,7 +59,12 @@
 
 \textbf{Proof:}
 \begin{enumerate}
-\item We shall proceed by cases. In the case that both a and b are positive, \(|a| = a\) and \(|b| = b\), so we may rewrite the triangle inequality in this case as  \(|a + b| \leq a + b\). It follows that \(|a + b|\) can be written as \(a + b\) as both \(a\) and \(b\) are positive numbers and therefore their sum will be a positive number. Substituting the alternate forms we have just derived back into the triangle inequality, we get the equation \(a + b \leq a + b\), which is true for all \(a, b \in \mathbb{R}_{\geq 0}\). In the case that both a and b are negative, we have from the definition of the absolute value that \(|a| = -a\) and \(|b| = -b\). This means that \(|a| + |b| = -a + (-b) = -a - b\) and that \(|a+b|= -(a+b) = (-a - b)\). Simplifying, we arrive at the equation \(-a -b \leq -a - b\), which is true for all \(a, b \in \mathbb{R}_{\leq 0}\). \qed
+\item We shall proceed by cases. 
+\begin{enumerate}
+\item[\(a,b \in \mathbb{R}_{\geq 0}\)] In the case that both a and b are positive, \(|a| = a\) and \(|b| = b\), so we may rewrite the triangle inequality in this case as  \(|a + b| \leq a + b\). It follows that \(|a + b|\) can be written as \(a + b\) as both \(a\) and \(b\) are positive numbers and therefore their sum will be a positive number. Substituting the alternate forms we have just derived back into the triangle inequality, we get the equation \(a + b \leq a + b\), which is true for all \(a, b \in \mathbb{R}_{\geq 0}\). 
+\item[\(a,b \in \mathbb{R}_{< 0}\)] In the case that both a and b are negative, we have from the definition of the absolute value that \(|a| = -a\) and \(|b| = -b\). This means that \(|a| + |b| = -a + (-b) = -a - b\) and that \(|a+b|= -(a+b) = (-a - b)\). Simplifying, we arrive at the equation \(-a -b \leq -a - b\), which is true for all \(a, b \in \mathbb{R}_{\leq 0}\).
+\item[Conclusion] We have shown that both cases reduce to the standard triangle inequality, showing it to be valid for the cases where both numbers are either positive or negative. \qed 
+\end{enumerate}
 
 \item We shall begin by expanding both sides of the equation. The left side expands to $a^2 + 2ab + b^2$ and the right side expands to \(a^2 + 2|a||b| + b^2\). Note that we can drop the absolute value bars for \(a^2\) and \(b^2\) on the right as the square of any number, positive or negative is always positive, and by the definition of the absolute value, if a number a is positive, then \(|a| = a\). Simplifying yields the inequality \(2ab \leq 2|a||b|\), which is true because \(2ab\) can be negative (consider the case where either a or b is negative but not both) but \(2|a||b|\) cannot be negative due to the absolute value of any real number always being positive. As squaring preserves the inequality, it follows that \(|a + b| \leq |a| + |b|\). \qed
 
@@ -60,4 +72,37 @@
 
 \item As \(||a|-|b|| = ||b| - |a||\) for all \(a, b \in \mathbb{R}\), we can assume that \(|a| > |b|\). Then by application of the triangle inequality, \(||a|-|b|| = |a| - |b| = |(a-b) + b| - |b| \leq |a-b| + |b| - |b| = |a-b|\). \qed
 \end{enumerate}
+
+\newpage
+
+\textbf{Exercise 1.2.7}
+
+Given a function \(f\) and a subset \(A\) of its domain, let \(f(A)\) represent the range of \(f\) over the set \(A\); that is, \(f(A) = \{f(x) \colon x \in A\}\).
+
+\begin{enumerate}
+    \item Let \(f(x) = x^{2}\). If \(A\) := \([0, 2]\) and \(B\) := \([1, 4]\), find \(f(A)\) and \(f(B)\). Does \(f(A \cap B) = f(A) \cap f(B)\) in this cse? Does \(f(A \cup B) = f(A) \cup f(B)\)?
+    \item Find two sets \(A\) and \(B\) for which \(f(A \cap B) \neq f(A) \cap f(B)\).
+    \item Show that, for an arbitrary function \(g \colon \mathbb{R} \to \mathbb{R}\) it is always true that \(g(A \cap B) \subseteq g(A) \cap g(B)\) for all sets \(A, B \subseteq \mathbb{R}\).
+    \item Form and prove a conjecture about the relationship between \(g(A \cup B)\) and \(g(A) \cup g(B)\) for an arbitrary function \(g\).
+\end{enumerate}
+
+\vspace{5mm}
+
+\textbf{Proof:}
+
+\begin{enumerate}
+    \item \(f(A) := [0, 4], f(B) := [1, 16], f(A \cap B) := [1, 4], f(A) \cap f(B) := [1, 4], f(A\cup B) := [0, 16], f(A) \cup f(B) = [0, 16]\)
+    \\
+    This shows that \(f(A \cap B) = f(A) \cap f(B)\) and \(f(A \cup B) = f(A) \cup f(B)\)
+
+    \item Let \(A := \{-2\}\) and let \(B := \{2\}\). Then \(A \cap B = \{\emptyset\}\) and \(f(A) \cap f(B) = \{4\}\).
+    \item Suppose that \(y \in g(A \cap B)\). Then by the definition of a function, \(\exists x \in A \cap B\) such that \(g(x) = y\). If \(x \in A \cap B\), then \(x \in A\) or \(x \in B\), implying that \(y \in g(A)\) or \(x \in g(B)\), which is the same thing as \(y \in g(A) \cup g(B)\). This means that \(g(A) \cap g(B) \subseteq g(A \cap B)\). \qed 
+    \item We conjecture that \(g(A \cup B) = g(A) \cup g(B)\). We shall prove this by showing inclusion in both directions via cases.
+    \begin{enumerate}
+        \item[\(\Rightarrow\)] For the forward direction, suppose that \(y \in g(A \cup B)\), this means that \(y \in g(A)\) or \(y \in g(B)\). This implies that \(y \in g(A) \cup g(B)\). This shows that \(g(A \cup B) \subseteq g(A) \cup g(B)\).
+        \item[\(\Leftarrow\)] For the reverse direction, suppose that \(y \in g(A) \cup g(B)\). This means that \(y \in g(A)\) or \(y \in (B)\), which is the same as \(y \in g(A \cup B)\) This shows that \(g(A) \cup g(B) \subseteq g(A \cup B)\).
+        \item[Conclusion] As we have demonstrated that \(g(A \cup B) \subseteq g(A) \cup g(B)\) and \(g(A) \cup g(B) \subseteq g(A \cup B)\), \(g(A \cup B) = g(A) \cup g(B)\). \qed
+    \end{enumerate}
+\end{enumerate}
+
 \end{document}
