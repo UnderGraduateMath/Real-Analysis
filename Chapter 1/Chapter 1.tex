@@ -1,5 +1,5 @@
 \documentclass[12 pt]{article}
-\usepackage{amsfonts, amssymb}
+\usepackage{amsfonts, amssymb, amsmath}
   
 %\usepackage{setspace}
 
@@ -39,13 +39,12 @@
 
 \item We shall proceed to show incluion by cases.
 \begin{enumerate}
-\item[\((\Rightarrow)\)] For the forward inclusion, let \(x \in (A \cup B)^c\), which implies that \(x \not \in A \cup B\), which means that \(x \not \in A\) and \(x \not \in B\). This means that \(x \in A^c\) and \(x \in B^c\), which is the same as \(x \in A^c \cap B^c\). This finally implies that \(A \cup B)^{c} \subseteq A^{c} \cap B^{c}\).
+\item[\((\Rightarrow)\)] For the forward inclusion, let \(x \in (A \cup B)^c\), which implies that \(x \not \in A \cup B\), which means that \(x \not \in A\) and \(x \not \in B\). This means that \(x \in A^c\) and \(x \in B^c\), which is the same as \(x \in A^c \cap B^c\). This finally implies that \((A \cup B)^{c} \subseteq A^{c} \cap B^{c}\).
 
 \item[\((\Leftarrow)\)] For the reverse inclusion, let \(x \in A^c \cap B^c\), which means that \(x \in A^c\) and \(x \in B^c\) by the definition of the set intersection. This implies that \(x \not \in A\) and \(x \not \in B\), which means that \(x \not \in A \cup B\), which is the same thing as saying that \(x \in (A \cup B)^c\). This finally implies that \(A^{c} \cap B^{c} \subseteq (A \cup B)^{c}\).
 \item[Conclusion] As we have shown that \(A \cup B)^{c} \subseteq A^{c} \cap B^{c}\) and \(A^{c} \cap B^{c} \subseteq (A \cup B)^{c}\), we have proven that \((A \cup B)^c = A^c \cap B^c\). \qed
 \end{enumerate}
 \end{enumerate}
-
 
 \newpage
 
@@ -105,6 +104,42 @@ Given a function \(f\) and a subset \(A\) of its domain, let \(f(A)\) represent 
         \item[\((\Leftarrow)\)] For the reverse direction, suppose that \(y \in g(A) \cup g(B)\). This means that \(y \in g(A)\) or \(y \in (B)\), which is the same as \(y \in g(A \cup B)\) This shows that \(g(A) \cup g(B) \subseteq g(A \cup B)\).
         \item[Conclusion] As we have demonstrated that \(g(A \cup B) \subseteq g(A) \cup g(B)\) and \(g(A) \cup g(B) \subseteq g(A \cup B)\), \(g(A \cup B) = g(A) \cup g(B)\). \qed
     \end{enumerate}
+\end{enumerate}
+\textbf{Exercise 1.2.8}
+\begin{enumerate}
+    \item Here are two important definitions related to a function \(f \colon A \to B\). The function \(f\) is \textit{one-to-one} (1-1) if \(a_{1} \neq a_{2}\) in \(A\) implies that \(f(a_{1}) \neq f(a_{2})\) in \(B\) The function \(f\) is \textit{onto} if, given any \(b \in B\) it is posible to find an element \(a \in A\) for which \(f(a) = b\).
+    \\
+    Give an exmaple of each or state the request is impossible:
+    \begin{enumerate}
+    \item \(f \colon \mathbb{N} \to \mathbb{N}\) that is 1-1 but not onto.
+    \item \(f \colon \mathbb{N} \to \mathbb{N}\) that is onto but not 1-1.
+    \item \(f \colon \mathbb{N} \to \mathbb{Z}\) that is 1-1 and onto.
+    \end{enumerate}
+\end{enumerate}
+
+\vspace{5mm}
+
+\textbf{Solutions:}
+\begin{enumerate}
+\item An example of a function that is one-to-one yet not onto is \(f(n) = n + 1\).
+\item Define a piecewise function f such that
+\[
+f(n) := 
+\begin{cases}
+1 & \text{if } n = 1 \\
+n - 1 & \text{if } n > 1
+\end{cases}
+\]
+
+\item Define another piecewise function f such that:
+\[
+f(n) :=
+\begin{cases}
+\frac{n}{2} & \text{if n is even} \\
+\frac{-(n+1)}{2} & \text{if n is odd}
+\end{cases}
+\]
+
 \end{enumerate}
 
 \end{document}
