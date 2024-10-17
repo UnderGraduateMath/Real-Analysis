@@ -25,24 +25,24 @@
 \textbf{Exercise 1.2.5 (De Morgan's Laws)} Let A and B be subsets of \(\mathbb{R}\).
 
 \begin{enumerate}
-\item If \(x \in A \cap B\), explain why \(x \in A^c \cup B^c\). This shows that \((A \cap B)^c \subseteq A^c \cup B^c\).
-\item Prove the reverse inclusion \((A \cap B)^c \supseteq A^c \cup B^c\) and conclude that \((A \cup B)^c = A^c \cap B^c\).
-\item Show \((A \cup B)^c = A^c \cap B^c\) by demonstrating inclusion both ways.
+\item If \(x \in A \cap B\), explain why \(x \in A^{c} \cup B^{c}\). This shows that \((A \cap B)^{c} \subseteq A^{c} \cup B^{c}\).
+\item Prove the reverse inclusion \((A \cap B)^{c} \supseteq A^{c} \cup B^{c}\) and conclude that \((A \cup B)^{c} = A^{c} \cap B^{c}\).
+\item Show \((A \cup B)^{c} = A^{c} \cap B^{c}\) by demonstrating inclusion both ways.
 \end{enumerate}
 
 \vspace{5mm}
 \textbf{Proof:}
 \begin{enumerate}
-\item If \(x \in (A \cap B)^c\), this implies that \(x \not \in A \cap B\). By the definition of the set intersection, this means that \(x \not \in A\) or \(x \not \in B\). This means that \(x \in A^c\) or \(x \in B^c\). If \(x \in A^c\), this means that \(x \in A^c \cup B^c\). If \(x \in B^c\), then \(x \in B^c \cup A^c\), which is the same thing as \(x \in  A^c \cup B^c\). This implies that \((A \cap B)^c \subseteq A^c \cup B^c \). \qed
+\item If \(x \in (A \cap B)^{c}\), this implies that \(x \not \in A \cap B\). By the definition of the set intersection, this means that \(x \not \in A\) or \(x \not \in B\). This means that \(x \in A^{c}\) or \(x \in B^{c}\). If \(x \in A^{c}\), this means that \(x \in A^{c} \cup B^{c}\). If \(x \in B^{c}\), then \(x \in B^{c} \cup A^{c}\), which is the same thing as \(x \in  A^{c} \cup B^{c}\). This implies that \((A \cap B)^{c} \subseteq A^{c} \cup B^{c} \). \qed
 
-\item If $x \in A^c \cup B^c$, this means that $x \in A^c$ or $x \in B^c$. This also means that $x \not \in  A$ or $x \not \in B$, which further implies that $x \not \in A \cap B$. This finally implies that $x \in (A \cap B)^c$, showing as desired that \((A \cap B)^c \supseteq A^c \cup B^c\). As both incusions have been shown, \((A \cup B)^c = A^c \cap B^c\). \qed
+\item If $x \in A^{c} \cup B^{c}$, this means that $x \in A^{c}$ or $x \in B^{c}$. This also means that $x \not \in  A$ or $x \not \in B$, which further implies that $x \not \in A \cap B$. This finally implies that $x \in (A \cap B)^{c}$, showing as desired that \((A \cap B)^{c} \supseteq A^{c} \cup B^{c}\). As both incusions have been shown, \((A \cup B)^{c} = A^{c} \cap B^{c}\). \qed
 
 \item We shall proceed to show incluion by cases.
 \begin{enumerate}
-\item[\((\Rightarrow)\)] For the forward inclusion, let \(x \in (A \cup B)^c\), which implies that \(x \not \in A \cup B\), which means that \(x \not \in A\) and \(x \not \in B\). This means that \(x \in A^c\) and \(x \in B^c\), which is the same as \(x \in A^c \cap B^c\). This finally implies that \((A \cup B)^{c} \subseteq A^{c} \cap B^{c}\).
+\item[\((\Rightarrow)\)] For the forward inclusion, let \(x \in (A \cup B)^{c}\), which implies that \(x \not \in A \cup B\), which means that \(x \not \in A\) and \(x \not \in B\). This means that \(x \in A^{c}\) and \(x \in B^{c}\), which is the same as \(x \in A^{c} \cap B^{c}\). This finally implies that \((A \cup B)^{c} \subseteq A^{c} \cap B^{c}\).
 
-\item[\((\Leftarrow)\)] For the reverse inclusion, let \(x \in A^c \cap B^c\), which means that \(x \in A^c\) and \(x \in B^c\) by the definition of the set intersection. This implies that \(x \not \in A\) and \(x \not \in B\), which means that \(x \not \in A \cup B\), which is the same thing as saying that \(x \in (A \cup B)^c\). This finally implies that \(A^{c} \cap B^{c} \subseteq (A \cup B)^{c}\).
-\item[Conclusion] As we have shown that \(A \cup B)^{c} \subseteq A^{c} \cap B^{c}\) and \(A^{c} \cap B^{c} \subseteq (A \cup B)^{c}\), we have proven that \((A \cup B)^c = A^c \cap B^c\). \qed
+\item[\((\Leftarrow)\)] For the reverse inclusion, let \(x \in A^{c} \cap B^{c}\), which means that \(x \in A^{c}\) and \(x \in B^{c}\) by the definition of the set intersection. This implies that \(x \not \in A\) and \(x \not \in B\), which means that \(x \not \in A \cup B\), which is the same thing as saying that \(x \in (A \cup B)^{c}\). This finally implies that \(A^{c} \cap B^{c} \subseteq (A \cup B)^{c}\).
+\item[Conclusion] As we have shown that \(A \cup B)^{c} \subseteq A^{c} \cap B^{c}\) and \(A^{c} \cap B^{c} \subseteq (A \cup B)^{c}\), we have proven that \((A \cup B)^{c} = A^{c} \cap B^{c}\). \qed
 \end{enumerate}
 \end{enumerate}
 
